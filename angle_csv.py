@@ -7,25 +7,20 @@ def angle_csv():
         for raw_angle in data:
             return raw_angle
 
-def raw_angle():
-    return [float(i) for i in angle_csv()]
+raw_angle = [float(i) for i in angle_csv()]
 
-def newtable():
-    table = np.array(raw_angle())
-    table.shape = (14,10)
-    return table
+table = np.array(raw_angle)
+table.shape = (14,10)
 
-# def table2line(table_new):
-#     lineangle =[]
-#         for l in table_new:
-#             for j in l:
-#                 k.append(j)        
-#         return lineangle
+def table_top():
+    table_top = np.roll(table,6)
+    table_top[0,0:6] = 0
+    return table_top
 
-# k =[]
-#     for i in table:
-#         for j in i:
-#             k.append(j)
+def table_under():
+    table_under = table + 220
+    return table_under
 
 if __name__ == '__main__':
-    print(newtable())
+    print(table_top())
+    print(table_under())
