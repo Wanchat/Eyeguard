@@ -1,7 +1,7 @@
-from table import table_under
+from table import table_under_fit
 from calc_plus import calc_under
 
-table = table_under()
+table = table_under_fit()
 
 def table_line(table):
 
@@ -71,5 +71,5 @@ def under_point_14(point):
     return calc_under(line_14, 13, point)
 
 if __name__ == '__main__':
-    print(line_14[0])
-    print(point_14(465))
+    print(line_14)
+    print(under_point_14(477))

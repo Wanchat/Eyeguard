@@ -1,9 +1,9 @@
-from table import table_top
+from table import table_up_fit
 from calc_plus import calc_top
 from other import loop_array
 
-table = table_top()
-
+table = table_up_fit()
+#
 table1 = table[0:1]
 table2 = table[1:2]
 table3 = table[2:3]
@@ -64,5 +64,5 @@ def top_point_14(point):
     return calc_top(line_14, 0, point)
 
 if __name__ == '__main__':
-    print(loop_array(table2))
-    print(point_2(12))
+    print(line_5)
+    print(top_point_5(72))
