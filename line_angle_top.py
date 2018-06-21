@@ -64,5 +64,5 @@ def top_point_14(point):
     return calc_top(line_14, 0, point)
 
 if __name__ == '__main__':
-    print(line_5)
-    print(top_point_5(72))
+    print(line_14)
+    print(top_point_14(225))
