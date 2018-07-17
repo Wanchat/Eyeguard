@@ -15,13 +15,13 @@ angle_prediction = Pixel_to_Angle()
 def estimate():
 
     detector = dlib.get_frontal_face_detector()
-    predictor = dlib.shape_predictor(r'C:\Users\Wanch\Google Drive\Thesis\code\angle_degree\shape_predictor_68_face_landmarks.dat')
+    predictor = dlib.shape_predictor(r'D:\code_python\Eyeguard\data\shape_predictor_68_face_landmarks.dat')
 
     # indexes facial landmarks
     (left_eye_Start, left_eye_End) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
     (right_eye_Start, right_eye_End) = face_utils.FACIAL_LANDMARKS_IDXS["right_eye"]
 
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
 
     while True:
         success, frame = cap.read()
