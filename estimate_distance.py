@@ -3,9 +3,6 @@ from scipy.spatial import distance as dist
 from imutils import face_utils
 import dlib
 import cv2
-# from angle_degree.detect_angle_lida import line_angle
-# import log
-# from graphic.text import text
 from canculator_angle import Pixel_to_Angle
 import math
 
@@ -15,7 +12,8 @@ angle_prediction = Pixel_to_Angle()
 def estimate():
 
     detector = dlib.get_frontal_face_detector()
-    predictor = dlib.shape_predictor(r'D:\code_python\Eyeguard\data\shape_predictor_68_face_landmarks.dat')
+    predictor = dlib.shape_predictor(
+        r'D:\code_python\Eyeguard\data\shape_predictor_68_face_landmarks.dat')
 
     # indexes facial landmarks
     (left_eye_Start, left_eye_End) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
@@ -88,7 +86,7 @@ def estimate():
                                (int(center_left_x), int(point_center_y)),
                                (0, 255, 0), 1)
 
-            # calc angle
+            # calc angle B
             angle_B = math.atan2(abs(point_center_x - center_right_x), abs(point_center_y - 240)) * 180/math.pi
 
             #  calc tan
@@ -98,10 +96,11 @@ def estimate():
                 tanRoundedx = round(tanx,2)
                 return tanRoundedx 
             
-            # estimate distance
+            # estimate distance line AD
             estimate_AD_cm = tanRounded(abs(90-angle_B))*2.6
 
             point = angle_prediction.px_plus(point_center_y)
+
             estimate_angle = angle_prediction.px_to_degree(point)
 
             estimate_distance = tanRounded(abs(90-estimate_angle))*estimate_AD_cm
@@ -109,7 +108,6 @@ def estimate():
             up_or_down = angle_prediction.d_or_e(point_center_y)
 
             print("{:7.2f}{:7.2f} {}".format(estimate_distance, estimate_angle, up_or_down) )
-
 
 
 

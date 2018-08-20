@@ -3,9 +3,6 @@ from scipy.spatial import distance as dist
 from imutils import face_utils
 import dlib
 import cv2
-# from angle_degree.detect_angle_lida import line_angle
-# import log
-# from graphic.text import text
 from canculator_angle import Pixel_to_Angle
 
 angle_prediction = Pixel_to_Angle()
@@ -68,7 +65,6 @@ def angle():
 
             print(cx,cy)
 
-
             cx = int(cx)
             cy = int(cy)
 
@@ -83,36 +79,6 @@ def angle():
             up_or_down = angle_prediction.d_or_e(eye_y)
             
             print(estimate_angle,up_or_down )
-
-
-
-
-            # if eye_y > 240:
-            #     print("angle : {} depression".format(degree))
-            #     color = (51, 51, 255)
-            # elif eye_y < 240:
-            #     print("angle : {} elevation".format(degree))
-            #     color = (77, 255, 77)
-            # else:
-            #     print("angle : {}".format(degree))
-            #     color = (255, 255, 255)
-
-            # # text
-            # pathfont = "Prompt-Regular.ttf"
-            # roi = (20, 20)
-            # frame = text(frame, roi, pathfont, str("angle: {}".format(degree)) ,24 ,color)
-
-            # number frame
-            # num_frame += 1
-
-            # add list
-            # if num_frame != 11:
-            #     log_angle.append(degree)
-            #
-            # else:
-            #     print("[INFO] >>>>>>> save log")
-            #     stop = "q"
-            #     break
 
         cv2.imshow("Frame", frame)
         # if cv2.waitKey(1) and stop == "q":

@@ -1,61 +1,55 @@
 import time
 import numpy as np
+import os
 
-def time_test():
-    start = time.time()
-    while True:
-        number = int(input("input number: "))
-        if number != 0:
-            pass
-        else:
-            stop = time.time() - start
-            print("{:.2f}".format(stop))
-            break
+import threading
+from queue import Queue
+
+q = Queue()
+
 
 class Timewacth:
+    def __init__(self):
 
-    def __init__(self, face_start):
-        self.face_start = face_start
+        self.thread = threading.Thread(target=self.timewacth)
 
-    def timewacth(self):
-        day = 0
-        hour = 0
-        minutes = 0
-        second = 0
+        self.day = 0
+        self.hour = 0
+        self.minutes = 0
+        self.second = 0
+
+    def timewacth(self,face_start):
 
         while True:
-            second = time.time() - self.face_start
+            self.second = time.time() - face_start
 
-            if second >= 60:
-                minutes += 1
-                second = 0
+            if self.second > 60:
+                self.second = 0
+                self.minutes += 1
 
-            if minutes >= 60:
-                hour += 1
-                minutes = 0
+                face_start = time.time()
 
-            if hour >= 24:
-                day += 1
-                hour = 0
+            if self.minutes > 60:
+                self.minutes = 0
+                self.hour += 1
 
-            # return hour, minutes
-            print("{}:{}:{:.2f}".format(hour, minutes, second))
+            if self.hour > 24:
+                self.hour = 0
+                self.day += 1
 
-    def minutes(self, time_min):
-        return time_min / 60
 
-    def hour(self, time_hour):
-        return time_hour / 60
+            print("{}: {}: {:.2f}".format(
+                self.hour,
+                self.minutes,
+                self.second))
 
-    def day(self, time_day):
-        return time_day / 24
 
-    def __str__(self):
-        return self.timewacth()
+
+
 
 if __name__ == '__main__':
 
+    t =Timewacth()
+    t.timewacth(time.time())
 
-    a = Timewacth(100)
-    ab = a.timealerd(60)
 

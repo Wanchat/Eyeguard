@@ -7,13 +7,13 @@ class Pixel_to_Angle:
         point = px_detection / cm_to_px
         return (math.atan2(point, 100) * 180 / math.pi)
     
-    def px_plus(self, px_point): # แปลง 240 เป็น 0 และ 480 เป็น 240
+    def px_plus(self, px_point):
         if px_point < 240:
             return 240 - px_point
         else:
             return px_point - 240
 
-    def d_or_e(self, px): #  depertion หรือ eveletion
+    def d_or_e(self, px):
         if px < 240:
             return "TOP"
         else:
@@ -21,7 +21,7 @@ class Pixel_to_Angle:
 
 if __name__ == '__main__':
      
-    px =  400 # พิกเซลที่ตรวจหาได้
+    px =  400
 
     a = Pixel_to_Angle()
     

@@ -1,0 +1,22 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>icon_blue-02.png</file>
+    <file>icon_blue-03.png</file>
+    <file>icon_blue-04.png</file>
+    <file>icon_blue-05.png</file>
+    <file>icon_blue-06.png</file>
+    <file>icon_blue-07.png</file>
+    <file>icon_blue-08.png</file>
+    <file>icon_blue-09.png</file>
+    <file>icon_blue-10.png</file>
+    <file>icon_black-02.png</file>
+    <file>icon_black-03.png</file>
+    <file>icon_black-04.png</file>
+    <file>icon_black-05.png</file>
+    <file>icon_black-06.png</file>
+    <file>icon_black-07.png</file>
+    <file>icon_black-08.png</file>
+    <file>icon_black-09.png</file>
+    <file>icon_black-10.png</file>
+  </qresource>
+</RCC>

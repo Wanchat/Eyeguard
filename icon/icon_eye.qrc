@@ -1,0 +1,31 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icon_black-02.png</file>
+    <file>icon_black-03.png</file>
+    <file>icon_black-04.png</file>
+    <file>icon_black-05.png</file>
+    <file>icon_black-06.png</file>
+    <file>icon_black-07.png</file>
+    <file>icon_black-08.png</file>
+    <file>icon_black-09.png</file>
+    <file>icon_black-10.png</file>
+    <file>icon_black-02.svg</file>
+    <file>icon_black-03.svg</file>
+    <file>icon_black-04.svg</file>
+    <file>icon_black-05.svg</file>
+    <file>icon_black-06.svg</file>
+    <file>icon_black-07.svg</file>
+    <file>icon_black-08.svg</file>
+    <file>icon_black-09.svg</file>
+    <file>icon_black-10.svg</file>
+    <file>icon-02.svg</file>
+    <file>icon-03.svg</file>
+    <file>icon-04.svg</file>
+    <file>icon-05.svg</file>
+    <file>icon-06.svg</file>
+    <file>icon-07.svg</file>
+    <file>icon-08.svg</file>
+    <file>icon-09.svg</file>
+    <file>icon-10.svg</file>
+  </qresource>
+</RCC>
